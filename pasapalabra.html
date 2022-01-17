@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pasapalabra</title>
+</head>
+<body>
+    
+    <div class="fondo-transparente">
+        
+        <div class="modal-newPlayer">
+            
+            <div class="modal-header">
+                <p class="modal-titulo">ventana modal</p>
+            </div>
+            
+            <div class="modal-mensaje">
+                <p>El juego te dará una definicion y deberas adivinar la palabra.
+        Si no la sabes pulsa pasapalabra y pasaras a la siguiente pregunta.
+        Solo terminarás cuando respondas a todas las preguntas o pulsando lo dejo</p>
+                <input name="playerName" placeholder="Dime como te llamas">
+            </div>
+            
+            <p class ="error">Debes introducir un nombre</p>
+            
+            <div class="modal-botones">
+                <div class="boton" id="aceptar-btn">ACEPTAR</div>
+                <div class="boton" id="ok-btn">OK</div>
+                <!-- <div class="boton id="cancelar-btn">CANCELAR</div> --> 
+            </div>
+        </div>
+
+        <div class="ranking">
+            <!-- Aqui ira maquetado el ranking con una tablita chula-->
+        </div>
+
+    </div>
+
+    <div class="container-global">
+        <header>
+            <div class="logo-container">
+                <img src="img/adaptation-left.svg" alt="logo pasapalabra">
+                <h1>pasapalabra</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="menuButton" id="new-game">nuevo juego</li>
+                    <li class="menuButton" id="ranking">ranking</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="status-container">
+                <p id="countdown">60</p>
+                <p id="hits">15</p>
+            </div>
+            <div id="rosco">
+                <div class ="rosco-letter default"><span>A</span></div>
+                <div class ="rosco-letter success"><span>B</span></div>
+                <div class ="rosco-letter mistake"><span>C</span></div>
+                <div class ="rosco-letter current"><span>D</span></div>
+                <div class ="rosco-letter default"><span>E</span></div>
+                <div class ="rosco-letter default"><span>F</span></div>
+                <div class ="rosco-letter default"><span>G</span></div>
+                <div class ="rosco-letter default"><span>H</span></div>
+                <div class ="rosco-letter default"><span>I</span></div>
+                <div class ="rosco-letter default"><span>J</span></div>
+                <div class ="rosco-letter default"><span>K</span></div>
+                <div class ="rosco-letter default"><span>L</span></div>
+                <div class ="rosco-letter default"><span>M</span></div>
+                <div class ="rosco-letter default"><span>N</span></div>
+                <div class ="rosco-letter default"><span>Ñ</span></div>
+                <div class ="rosco-letter default"><span>O</span></div>
+                <div class ="rosco-letter default"><span>P</span></div>
+                <div class ="rosco-letter default"><span>Q</span></div>
+                <div class ="rosco-letter default"><span>R</span></div>
+                <div class ="rosco-letter default"><span>S</span></div>
+                <div class ="rosco-letter default"><span>T</span></div>
+                <div class ="rosco-letter default"><span>U</span></div>
+                <div class ="rosco-letter default"><span>V</span></div>
+                <div class ="rosco-letter default"><span>W</span></div>
+                <div class ="rosco-letter default"><span>X</span></div>
+                <div class ="rosco-letter default"><span>Y</span></div>
+                <div class ="rosco-letter mistake"><span>Z</span></div>
+                <div class = "video"></div>
+            </div>
+            
+            <div class="game-container">
+                
+                <div class="player-container">
+                    <div class="avatar-container">
+                        <img src="img/avatar.jpg" alt="avatar de jugador">
+                    </div>
+                    <h2 id="player-name">nombre del jugador</h2>
+                </div>
+
+                <div class="questions-container">
+                    <div class="flip-card">
+                        <div class="front">
+                            <p id="question-header">CON LA A</p>
+                            <p id="question-body">
+                                Conducto por donde va la sangre desde el corazón a las demás partes del cuerpo.
+                            </p>
+                        </div>
+                        <div class="back">
+                            <h3>pasapalabra</h3>
+                            <p>Es la respuesta correcta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="response-container">
+                    <input type="text" name="response" id="respuesta" placeholder="escribe tu respuesta" size="20" maxlength="20">
+                    <input type=button value="envia">
+                  
+                </div>
+                <div class="options-question">
+                    <div class="button-question default" id="pasapalabra">pasa palabra</div>
+                    <div class="button-question mistake" id="abandonar">lo dejo</div>
+                    <!-- <div class="button-question info" id="cambio">cambia de jugador</div> -->
+                </div>
+            </div>
+         
+        </main>
+        <footer>
+            <p>&#169; 2021 Hecho con &#128150; por Manuel Saez Carmona</p>
+        </footer>
+    </div>
+    <script src="./js/pasapalabra-main.js" type="module"></script>
+</body>
+</html>
+

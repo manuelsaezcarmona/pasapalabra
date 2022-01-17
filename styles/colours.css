@@ -1,0 +1,24 @@
+/* Colores para el pasapalabra*/
+
+:root{
+    --blue-rosco: #0269fe;
+    --blue-dark-rosco: #014afd;
+    --blue-shadow-rosco: #0219f9;
+    --blue-active-rosco: #298cf9;
+    --blue-active-light-rosco: #95c7fe;
+    --green-rosco: #03c83e;
+    --green-dark-rosco: #07ab46;
+    --green-shadow-rosco: #08682b;
+    --orange-rosco: #fe6d06;
+    --orange-dark-rosco: #fd4703;
+    --orange-shadow-rosco: #fd3002;
+    --red-rosco: #ff004a;
+    --red-dark-rosco: #9b012c;
+    --red-card: #e5989b;
+    --cream: #fefae0;
+    --blue-gradient: linear-gradient(53deg, var(--blue-dark-rosco) 0%, var(--blue-rosco) 100%);
+    --orange-gradient: linear-gradient(53deg, var(--orange-dark-rosco) 70%, var(--orange-rosco) 100%);   
+    --green-gradient: linear-gradient(53deg, var(--green-dark-rosco) 0%, var(--green-rosco) 100%);
+    --red-gradient: linear-gradient(53deg, var(--red-dark-rosco) 70%, var(--red-rosco) 100%);
+    --blue-light-gradient: linear-gradient(53deg, var(--blue-active-light-rosco) 0%, var(--blue-active-rosco) 100%);
+}

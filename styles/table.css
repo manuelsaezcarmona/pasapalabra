@@ -1,0 +1,73 @@
+
+  .ranking {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    overflow: hidden;
+    border: 1px solid #fd4703;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .ranking table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #fd4703;
+  }
+  .ranking table td,
+  .ranking table th {
+    padding: 3px 10px;
+  }
+  
+  .ranking table thead th {
+    font-family: TypoGraphica1;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.05, #fe6d06),
+      color-stop(1, #fd3002)
+    );
+    background: -moz-linear-gradient(center top, #fe6d06 5%, #fd3002 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FE6D06', endColorstr='#FD3002');
+    background-color: #fe6d06;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-left: 0px solid #fd4703;
+  }
+  .ranking table thead th:first-child {
+    border: none;
+  }
+  .ranking table tbody td {
+    font-family: 'RockoUltraFLF';
+    color: #000000;
+    font-size: 1rem;
+    font-weight: normal;
+    
+  }
+  .ranking table tbody .alt td {
+    background: #95c7fe;
+    color: #000000;
+  }
+  .ranking table tbody td:first-child {
+    border-left: none;
+  }
+  .ranking table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  #table-btn{
+      font-family: 'RockoUltraFLF';
+      width: 25%;
+      text-align: center;
+      margin: 1% 0%;
+  }
+

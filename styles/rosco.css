@@ -1,0 +1,202 @@
+:root{
+    --numitems: 27;
+    --circlesize: 50vw;
+    --itemsize: 4vw;
+    /*variables que tienes que hacer la operacion*/
+    --mitaditem: calc(var(--itemsize) / 2);     /*mitaditem = itemsize / 2*/ 
+    --mitadcirculo:   calc(var(--circlesize) / 2); /* mitadcirculo = circlesize /2*/
+    --angulo:  calc(360 / var(--numitems)) ; /* angulo = 360 / numitems*/
+    
+    /* ROTACION. Deberas añadir o quitar lineas en funcion del numero de items
+       que tengas. Si añades debes de referenciar a la anterior variable. 
+       (Solucion recursiva en css) */
+       /*Aqui colocas en donde quieres que empiece el circulo como referencia los angulos rectos:
+            - 270  ->  arriba
+            - 0    ->  derecha
+            - 90   ->  abajo
+            - 180  ->  izquierda
+            Si pones 360 es una vuelta entera con lo que estarias en la misma posicion que 0º
+    */
+
+    --rot1: 270; 
+    --rot2: calc(var(--rot1) + var(--angulo));
+    --rot3: calc(var(--rot2) + var(--angulo));
+    --rot4: calc(var(--rot3) + var(--angulo));
+    --rot5: calc(var(--rot4) + var(--angulo));
+    --rot6: calc(var(--rot5) + var(--angulo));
+    --rot7: calc(var(--rot6) + var(--angulo));
+    --rot8: calc(var(--rot7) + var(--angulo));
+    --rot9: calc(var(--rot8) + var(--angulo));
+    --rot10: calc(var(--rot9) + var(--angulo));
+    --rot11: calc(var(--rot10) + var(--angulo));
+    --rot12: calc(var(--rot11) + var(--angulo));
+    --rot13: calc(var(--rot12) + var(--angulo));
+    --rot14: calc(var(--rot13) + var(--angulo));
+    --rot15: calc(var(--rot14) + var(--angulo));
+    --rot16: calc(var(--rot15) + var(--angulo));
+    --rot17: calc(var(--rot16) + var(--angulo));
+    --rot18: calc(var(--rot17) + var(--angulo));
+    --rot19: calc(var(--rot18) + var(--angulo));
+    --rot20: calc(var(--rot19) + var(--angulo));
+    --rot21: calc(var(--rot20) + var(--angulo));
+    --rot22: calc(var(--rot21) + var(--angulo));
+    --rot23: calc(var(--rot22) + var(--angulo));
+    --rot24: calc(var(--rot23) + var(--angulo));
+    --rot25: calc(var(--rot24) + var(--angulo));
+    --rot26: calc(var(--rot25) + var(--angulo));
+    --rot27: calc(var(--rot26) + var(--angulo));
+}
+
+#rosco{
+    /*background-color: cornsilk;*/
+    position: relative;
+    width: var(--circlesize);
+    height: var(--circlesize);
+    aspect-ratio: 1/1;
+    box-sizing: content-box;
+    border-radius: 50%;
+    margin: var(--mitaditem);
+   /* border-radius: 50%;*/
+}
+
+/* #rosco > .video {
+    background-color: forestgreen;
+    border-radius: 50%;
+    width: calc(var(--circlesize) / 2);
+    height: calc(var(--circlesize) / 2);
+}*/ 
+#rosco > .rosco-letter{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: #ffffff solid 5px;
+    text-align: center;
+    width: var(--itemsize);
+    height: var(--itemsize);
+    /*OJO la medida hay que cambiarla si especificas otra en variables
+      si no lo haces no funcionara es como mezclar peras con manzanas*/
+    margin: calc(0vh - var(--mitaditem));
+}
+
+#rosco > .rosco-letter > span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'RockoUltraFLF';
+    color: white;
+	font-size: calc(var(--itemsize) * 0.50); /*cambia el porcentaje para cambiar el tamaño*/
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/*variaciones de .rosco-letter*/
+.default{
+    background: var(--blue-gradient);
+}
+
+.success{
+    background: var(--green-gradient);
+}
+.mistake{
+    background: var(--red-gradient);
+}
+
+.current{
+    background: var(--blue-light-gradient);
+}
+
+.info{
+	background: var(--orange-gradient);
+}
+
+/*añade tantas lineas como items tengas*/
+
+#rosco > *:nth-of-type(1){
+    transform: rotate(calc(var(--rot1) * 1deg)) translate(calc(var(--mitadcirculo)))  rotate(calc(var(--rot1) * -1deg));
+}
+
+#rosco > *:nth-of-type(2){
+    transform: rotate(calc(var(--rot2) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot2) * -1deg));
+}
+
+#rosco > *:nth-of-type(3){
+    transform: rotate(calc(var(--rot3) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot3) * -1deg));
+}
+#rosco > *:nth-of-type(4){
+    transform: rotate(calc(var(--rot4) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot4) * -1deg));
+}
+
+#rosco > *:nth-of-type(5){
+    transform: rotate(calc(var(--rot5) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot5) * -1deg));
+}
+
+#rosco > *:nth-of-type(6){
+    transform: rotate(calc(var(--rot6) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot6) * -1deg));
+}
+
+#rosco > *:nth-of-type(7){
+    transform: rotate(calc(var(--rot7) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot7) * -1deg));
+}
+#rosco > *:nth-of-type(8){
+    transform: rotate(calc(var(--rot8) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot8) * -1deg));
+}
+#rosco > *:nth-of-type(9){
+    transform: rotate(calc(var(--rot9) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot9) * -1deg));
+}
+#rosco > *:nth-of-type(10){
+    transform: rotate(calc(var(--rot10) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot10) * -1deg));
+}
+#rosco > *:nth-of-type(11){
+    transform: rotate(calc(var(--rot11) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot11) * -1deg));
+}
+#rosco > *:nth-of-type(12){
+    transform: rotate(calc(var(--rot12) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot12) * -1deg));
+}
+#rosco > *:nth-of-type(13){
+    transform: rotate(calc(var(--rot13) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot13) * -1deg));
+}
+#rosco > *:nth-of-type(14){
+    transform: rotate(calc(var(--rot14) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot14) * -1deg));
+}
+#rosco > *:nth-of-type(15){
+    transform: rotate(calc(var(--rot15) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot15) * -1deg));
+}
+#rosco > *:nth-of-type(16){
+    transform: rotate(calc(var(--rot16) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot16) * -1deg));
+}
+#rosco > *:nth-of-type(17){
+    transform: rotate(calc(var(--rot17) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot17) * -1deg));
+}
+#rosco > *:nth-of-type(18){
+    transform: rotate(calc(var(--rot18) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot18) * -1deg));
+}
+#rosco > *:nth-of-type(19){
+    transform: rotate(calc(var(--rot19) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot19) * -1deg));
+}
+#rosco > *:nth-of-type(20){
+    transform: rotate(calc(var(--rot20) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot20) * -1deg));
+}
+#rosco > *:nth-of-type(21){
+    transform: rotate(calc(var(--rot21) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot21) * -1deg));
+}
+#rosco > *:nth-of-type(22){
+    transform: rotate(calc(var(--rot22) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot22) * -1deg));
+}
+#rosco > *:nth-of-type(23){
+    transform: rotate(calc(var(--rot23) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot23) * -1deg));
+}
+#rosco > *:nth-of-type(24){
+    transform: rotate(calc(var(--rot24) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot24) * -1deg));
+}
+#rosco > *:nth-of-type(25){
+    transform: rotate(calc(var(--rot25) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot25) * -1deg));
+}
+#rosco > *:nth-of-type(26){
+    transform: rotate(calc(var(--rot26) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot26) * -1deg));
+}
+#rosco > *:nth-of-type(27){
+    transform: rotate(calc(var(--rot27) * 1deg)) translate(var(--mitadcirculo))  rotate(calc(var(--rot27) * -1deg));
+}
+

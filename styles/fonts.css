@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: 'TypoGraphica1';
+    src:url('../fonts/TypoGraphica1.ttf.woff') format('woff'),
+        url('../fonts/TypoGraphica1.ttf.svg#TypoGraphica1') format('svg'),
+        url('../fonts/TypoGraphica1.ttf.eot'),
+        url('../fonts/TypoGraphica1.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'RockoUltraFLF';
+    src:url('../fonts/RockoUltraFLF.ttf.woff') format('woff'),
+        url('../fonts/RockoUltraFLF.ttf.svg#RockoUltraFLF') format('svg'),
+        url('../fonts/RockoUltraFLF.ttf.eot'),
+        url('../fonts/RockoUltraFLF.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+

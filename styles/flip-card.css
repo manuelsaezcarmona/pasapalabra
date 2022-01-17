@@ -1,0 +1,58 @@
+.flip-card, .flip-card:hover {
+    transition: transform 1s, background 0.1s 0.25s;
+}
+
+
+.flip-card {
+    width: 100%;
+    height: 30vh;
+    color: white;
+    padding: 5%;
+    margin: 5% 0%;
+    border-radius: 10px;
+    background: var(--orange-gradient);
+    box-shadow: 5px 5px 30px #222 inset;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    
+}
+/*
+.flip-card:hover{
+    transform: rotateY(180deg);
+    background: black;
+  }*/
+    
+  
+
+  .front, .back, .flip-card:hover .back, .flip-card:hover .front{
+    transition: all 0.5s 0.25s;
+ }
+
+ .front, .back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+  }
+ 
+ .back {
+    color: white;
+    /*opacity: 0; */
+    transform: translate(-50%, -50%) rotatey(180deg);
+ } 
+
+
+#question-header , .back > h3{
+    text-transform: uppercase;
+    
+   
+}   
+
+#question-body, .back > p{
+     text-transform: capitalize;
+    
+}
+
+
+

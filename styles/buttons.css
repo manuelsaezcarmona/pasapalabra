@@ -1,0 +1,123 @@
+.menuButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	cursor:pointer;
+	color:#333333;
+	font-family:'RockoUltraFLF';
+	font-size:1.5em;
+	font-weight:bold;
+	padding: 0.1em 2em;
+	text-decoration:none;
+    text-transform: capitalize;
+    margin: 0.2em 0.2em;
+	text-shadow:0px 1px 0px #fe6d06;
+}
+.menuButton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.menuButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+/*Ventanas Modales*/ 
+
+.fondo-transparente{
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    z-index: 20;
+}
+
+
+.modal-newPlayer{
+    background: linear-gradient(0deg,white 80%, var(--orange-rosco) 20%);
+    width: 500px;
+    height: 350px;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5%;
+    font-family: 'RockoUltraFLF',Arial, Helvetica, sans-serif;
+}
+    .modal-newPlayer .modal-header{
+        width: 100%;
+        height: 20%;
+        color: white;
+        line-height: 3.5em;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .modal-titulo {
+        text-transform: uppercase;
+    }
+
+    .modal-mensaje{            
+        padding: 1% 3%;
+        text-align: justify;
+    }
+    .modal-mensaje >p{
+        margin: 1% 0%;
+    }
+    .modal-mensaje > input[name="playerName"]{
+        width: 100%;
+        margin: 1% 0%; 
+        padding: 1%;
+        font-family: 'RockoUltraFLF',Arial, Helvetica, sans-serif;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .modal-mensaje > input[name="playerName"]:focus{
+        background-color: #ffcba6;
+        
+    }
+
+    .modal-botones{      
+    width: 100%;    
+    border-top:whitesmoke 1px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+    .boton{
+        background: var(--blue-gradient);
+        padding: 8px 30px;
+        color: var(--cream);
+        text-decoration: none;
+        border-radius: 6px;
+        cursor: pointer;
+        
+    }
+    .boton:hover{
+        background: var(--orange-gradient);
+        color: white;
+    }
+
+    .modal-newPlayer > .error {
+        margin: 1% 0%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        color: var(--red-dark-rosco);
+        text-align: center;
+        display: none;
+    
+        
+    }
